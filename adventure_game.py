@@ -30,6 +30,7 @@ def adventure_game():
                 break
 
         if item_choice == "torch":
+            
             print("You pick up the %s and proceed down the path on the opposite"
             " side of the clearing. The branches above thicken, blocking out the"
             " sun. You turn on the %s, just in time to see and step over a protruding"
@@ -38,6 +39,7 @@ def adventure_game():
             item_choice))
 
         if item_choice == "sunglasses":
+            
             print("You pick up the %s and proceed down the path on the opposite"
             " side of the clearing. The branches above thin out, glaring sunlight"
             " streaming through. You put on the %s, just in time to see and step"
@@ -47,6 +49,37 @@ def adventure_game():
 
 
     if direction_choice == "right":
-        print("right")
+        
+        print("You head right, striding under thick branches until you come "
+              "to a circular clearing. In the centre is an moss-covered "
+              "sundial with a pair of Wellington boots and a machete upon it.")
+
+        item_choice = input("Will you take the boots or the machete?").lower()
+
+        while True:
+
+            if item_choice != "boots" and item_choice != "machete":
+                item_choice = input("You must take the 'boots' or the "
+                                    "'machete'!").lower()
+                continue
+            else:
+                break
+
+        if item_choice == "boots":
+            
+            print("You pick up the %s and proceed down the path on the opposite"
+            " side of the clearing. Hearing the sound of running water, you come"
+            " to a stream flowing over the path. Swapping your walking shoes for"
+            " the %s, you wade the stream, and then switch back to your shoes. After"
+            " a few minutes, you exit the forest, and see ahead that the path meets"
+            " up with another joining from the left."%(item_choice,item_choice))
+        
+        if item_choice == "machete":
+            print("You pick up the %s and proceed down the path on the opposite"
+            " side of the clearing. Brambles begin encroaching from both sides,"
+            " until they block the route in a twisted thorny mass. You pull out the"
+            " %s and hack clear a way through. After a few minutes, you exit the"
+            " forest, and see ahead that your path meets up with another joining"
+            " from the left."%(item_choice,item_choice))
 
 adventure_game()
